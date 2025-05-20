@@ -1,0 +1,140 @@
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue',
+    sans-serif;
+  background-color: var(--background1, white);
+}
+
+@font-face {
+  font-family: 'Ubuntu';
+  src: url('./fonts/ubuntu-regular-webfont.woff2') format('woff2'),
+    url('./fonts/ubuntu-regular-webfont.woff') format('woff');
+  font-style: normal;
+}
+
+:root {
+  --background1: rgb(255, 255, 255);
+  --background2: rgb(255, 255, 255);
+  --text1: rgb(0, 0, 0);
+  --text2: rgb(0, 0, 0);
+  --text-footer: rgb(0, 0, 0);
+  /* font-size: 16px; */ /* Disables browser font size setting */
+}
+
+body {
+  display: grid;
+  grid-template: 2fr 4fr 40px/ 1fr;
+}
+
+header {
+  grid-row: 1 / 2;
+
+  display: flex;
+  justify-content: center;
+}
+
+.background {
+  height: 50%;
+  width: 100%;
+  background-color: rgb(98, 169, 199);
+  box-shadow: 0px 0px 5px gray;
+
+  position: absolute;
+  z-index: -2;
+
+  transform-origin: bottom left;
+  transform: skewY(170deg);
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+
+  max-width: 800px;
+  margin: 10px;
+
+  border: 1px solid red;
+}
+
+.picture-container {
+  box-shadow: 0px 0px 5px gray;
+  margin: 10px 0 10px 10px;
+}
+
+.picture {
+  display: block;
+  max-height: 300px;
+}
+
+.bio {
+  background-color: white;
+  height: fit-content;
+  max-width: 400px;
+  margin: 10px 10px 10px 0;
+  padding: 10px;
+  box-shadow: 0px 0px 5px gray;
+
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.logo-container {
+  display: flex;
+  justify-content: end;
+}
+
+.logo {
+  height: 30px;
+  width: 30px;
+  border: 1px solid red;
+}
+
+main {
+  grid-row: 2 / 3;
+
+  display: grid;
+  grid-template: 2fr 1fr / 1fr;
+
+  border: 1px solid blue;
+}
+
+.section {
+  display: flex;
+  justify-content: center;
+
+  border: 1px solid green;
+}
+
+.wrapper.two {
+  display: block;
+}
+
+.tab-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.tab {
+  height: 100px;
+  width: 100px;
+  background-color: violet;
+  margin: 10px;
+}
+
+footer {
+  grid-row: 3 / 4;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 40px;
+  font-size: 1rem;
+  color: var(--text-footer);
+}
