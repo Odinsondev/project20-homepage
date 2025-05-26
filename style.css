@@ -18,10 +18,10 @@ body {
 
 :root {
   --background1: rgb(255, 255, 255);
-  --background2: rgb(255, 255, 255);
+  --background2: rgb(89, 120, 163);
   --text1: rgb(0, 0, 0);
-  --text2: rgb(0, 0, 0);
-  --text-footer: rgb(0, 0, 0);
+  --text2: rgb(255, 255, 255);
+  --text-footer: rgb(209, 211, 219);
   /* font-size: 16px; */ /* Disables browser font size setting */
 }
 
@@ -40,7 +40,7 @@ header {
 .background {
   height: 50%;
   width: 100%;
-  background-color: rgb(98, 169, 199);
+  background-color: var(--background2);
   box-shadow: 0px 0px 5px gray;
 
   position: absolute;
@@ -54,10 +54,8 @@ header {
   display: flex;
   align-items: center;
 
-  max-width: 800px;
+  max-width: 750px;
   margin: 10px;
-
-  border: 1px solid red;
 }
 
 .picture-container {
@@ -71,9 +69,9 @@ header {
 }
 
 .bio {
-  background-color: white;
+  background-color: var(--background1);
   height: fit-content;
-  max-width: 400px;
+  max-width: 550px;
   margin: 10px 10px 10px 0;
   padding: 10px;
   box-shadow: 0px 0px 5px gray;
@@ -86,33 +84,37 @@ header {
 
 .logo-container {
   display: flex;
+  align-items: center;
+}
+
+.logo-container.one {
   justify-content: end;
 }
 
 .logo {
-  height: 30px;
-  width: 30px;
-  border: 1px solid red;
+  width: 25px;
+  margin: 3px;
 }
 
 main {
   grid-row: 2 / 3;
 
-  display: grid;
-  grid-template: 2fr 1fr / 1fr;
-
-  border: 1px solid blue;
+  /*   display: grid;
+  grid-template: 2fr 1fr / 1fr; */
 }
 
 .section {
   display: flex;
   justify-content: center;
-
-  border: 1px solid green;
 }
 
 .wrapper.two {
   display: block;
+}
+
+.my-work-heading {
+  padding-left: 10px;
+  margin: 0.5rem 0;
 }
 
 .tab-container {
@@ -121,10 +123,120 @@ main {
 }
 
 .tab {
-  height: 100px;
-  width: 100px;
-  background-color: violet;
+  width: calc((750px - (6 * 10px)) / 3);
   margin: 10px;
+  box-shadow: 0px 0px 5px gray;
+}
+
+.tab-top {
+  display: flex;
+  align-items: center;
+
+  min-height: 170px;
+}
+
+.tab.one > .tab-top {
+  background-color: rgb(77, 77, 173);
+}
+.tab.two > .tab-top {
+  background-color: rgb(94, 168, 195);
+}
+.tab.three > .tab-top {
+  background-color: rgb(113, 208, 184);
+}
+.tab.four > .tab-top {
+  background-color: rgb(56, 136, 63);
+}
+.tab.five > .tab-top {
+  background-color: rgb(178, 204, 101);
+}
+.tab.six > .tab-top {
+  background-color: rgb(233, 230, 144);
+}
+
+.tab-top > p {
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.tab-bottom {
+  min-height: 100px;
+  padding: 10px;
+}
+
+.tab-bottom:nth-child(2) > p {
+  font-size: 0.75rem;
+}
+
+.tab-bottom-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+h3 {
+  font-size: 1rem;
+  margin: 0.5rem 0;
+  font-weight: 100;
+}
+
+.logo-small {
+  height: 25px;
+  width: 25px;
+  margin: 3px;
+}
+
+.logo-small.share {
+  height: 23px;
+  width: 23px;
+}
+
+.section.two {
+  background-color: var(--background2);
+}
+
+.wrapper.three {
+  align-items: start;
+
+  flex-wrap: wrap;
+  max-width: 750px;
+}
+
+.contact-me-heading {
+  margin-top: 0;
+}
+
+.contact {
+  width: 260px;
+  margin: 10px;
+  color: var(--text2);
+}
+
+.phone-container,
+.email-container {
+  display: flex;
+  align-items: center;
+}
+
+.phone-container > p,
+.email-container > p {
+  margin: 0.5rem 0;
+}
+
+.logo-small.email {
+  height: 30px;
+}
+
+.space {
+  width: calc(750px - 260px - 420px - 40px);
+}
+
+.picture-two-container {
+  margin: 10px;
+}
+
+.picture-two {
+  display: block;
+  max-height: 280px;
 }
 
 footer {
@@ -134,6 +246,7 @@ footer {
   justify-content: center;
   align-items: center;
 
+  background-color: var(--background2);
   height: 40px;
   font-size: 1rem;
   color: var(--text-footer);
