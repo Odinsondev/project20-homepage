@@ -80,6 +80,19 @@ header {
   max-height: 300px;
 }
 
+.name-text {
+  position: absolute;
+
+  margin: 0;
+  color: white;
+  text-shadow: 0px 0px 5px black;
+  font-size: 1.8rem;
+  font-weight: bold;
+  bottom: 10px;
+  left: 10px;
+  z-index: 3;
+}
+
 .bio {
   background-color: var(--background1);
   height: fit-content;
@@ -93,6 +106,10 @@ header {
   top: 0;
   left: 0;
   z-index: 1;
+}
+
+.float {
+  display: none;
 }
 
 .logo-container {
@@ -212,7 +229,6 @@ h3 {
   align-items: start;
 
   flex-wrap: wrap;
-  max-width: 750px;
 }
 
 .contact-me-heading {
@@ -264,4 +280,59 @@ footer {
   height: 40px;
   font-size: 1rem;
   color: var(--text-footer);
+}
+
+@media (max-width: 800px) {
+  body {
+    background-color: rgb(225, 216, 216);
+  }
+
+  .wrapper {
+    max-width: 500px;
+    margin: 10px;
+  }
+
+  .wrapper.one {
+    position: relative;
+    max-width: 530px;
+  }
+
+  .picture-container.one {
+    position: absolute;
+  }
+
+  .name-text {
+    top: 20px;
+    left: 160px;
+    text-wrap: nowrap;
+
+    text-shadow: 0px 0px 5px rgb(30, 30, 30);
+  }
+
+  .bio {
+    margin: 90px 40px 10px 40px;
+    padding: 10px 20px;
+  }
+
+  .float {
+    display: inline;
+    float: left;
+
+    margin: 0 10px 0 0;
+    width: 150px;
+    height: 210px;
+  }
+
+  .wrapper.three {
+    align-items: center;
+
+    max-width: 530px;
+  }
+
+  .picture-two {
+    display: block;
+    height: 280px;
+    width: 200px;
+    object-fit: cover;
+  }
 }
