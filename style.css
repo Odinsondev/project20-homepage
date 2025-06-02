@@ -282,14 +282,9 @@ footer {
   color: var(--text-footer);
 }
 
-@media (max-width: 800px) {
-  body {
-    background-color: rgb(225, 216, 216);
-  }
-
+@media (max-width: 800px) and (min-width: 575px) {
   .wrapper {
     max-width: 500px;
-    margin: 10px;
   }
 
   .wrapper.one {
@@ -330,9 +325,53 @@ footer {
   }
 
   .picture-two {
-    display: block;
     height: 280px;
     width: 200px;
     object-fit: cover;
+  }
+}
+
+@media (max-width: 575px) {
+  .wrapper.one,
+  .wrapper.two,
+  .wrapper.three {
+    max-width: 250px;
+  }
+
+  .wrapper.one {
+    display: block;
+  }
+
+  .picture-container.one {
+    width: fit-content;
+    margin: auto;
+  }
+
+  .name-text {
+    bottom: 10px;
+    left: 10px;
+
+    text-shadow: 0px 0px 5px rgb(30, 30, 30);
+  }
+
+  .bio {
+    background-color: rgba(255, 255, 255, 0);
+    box-shadow: none;
+  }
+
+  .wrapper.three {
+    max-width: none;
+    width: 100%;
+  }
+
+  .picture-two {
+    width: calc(100% - 20px);
+    margin: 10px;
+
+    object-fit: cover;
+  }
+
+  footer {
+    z-index: 6;
   }
 }
