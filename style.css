@@ -195,7 +195,7 @@ main {
   padding: 10px;
 }
 
-.tab-bottom:nth-child(2) > p {
+.tab-bottom:nth-child(2) {
   font-size: 0.75rem;
 }
 
@@ -357,11 +357,63 @@ footer {
   .bio {
     background-color: rgba(255, 255, 255, 0);
     box-shadow: none;
+    margin: 10px 0;
+  }
+
+  .bio h2 {
+    text-align: center;
+  }
+
+  .logo-container.one {
+    justify-self: center;
+  }
+
+  .my-work-heading {
+    text-align: center;
+    padding: 0;
   }
 
   .wrapper.three {
+    justify-content: center;
+
     max-width: none;
     width: 100%;
+  }
+
+  .contact {
+    max-width: 230px;
+  }
+
+  .contact-me-heading {
+    text-align: center;
+  }
+
+  .contact p:nth-child(3) {
+    font-size: 0.75rem;
+  }
+
+  .phone-container > img,
+  .email-container > img {
+    display: none;
+  }
+
+  .phone-container > p,
+  .email-container > p {
+    font-size: 0.75rem;
+  }
+
+  .logo-container.two {
+    justify-self: center;
+
+    margin-top: 10px;
+  }
+
+  .logo-container.two a .logo {
+    width: 30px;
+  }
+
+  .space {
+    display: none;
   }
 
   .picture-two {
@@ -371,7 +423,7 @@ footer {
     object-fit: cover;
   }
 
-  footer {
-    z-index: 6;
+  footer p {
+    font-size: 0.75rem;
   }
 }
